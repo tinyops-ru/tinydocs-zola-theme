@@ -28,6 +28,13 @@
     <body>
         <div class="menu">
             {% block before_menu %}
+            <div class="menu__header">
+                <div class="text-color-secondary">
+                    ДОКУМЕНТАЦИЯ
+                </div>
+                <h2>{{config.extra.documentation_for}}</h2>
+            </div>
+
             {% endblock before_menu %}
             <nav role="navigation">
                 <ul>
