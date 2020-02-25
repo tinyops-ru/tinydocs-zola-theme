@@ -42,9 +42,12 @@
                         {% set index = get_section(path="_index.md") %}
                         {% for s in index.subsections %}
                             {% set subsection = get_section(path=s) %}
-                            <li {% if current_path == subsection.path %}class="active font-weight-bold"{% endif %}>
+                            <li>
                                 {% set chapter_num = loop.index %}
-                                <a href="{{ subsection.permalink }}">
+                                <a href="{{ subsection.permalink }}"
+                                   {% if current_path == subsection.path %}class="active"{% endif %}
+                                   {% if current_path != subsection.path %}class="font-weight-bold"{% endif %}
+                                >
                                     {% if config.extra.book_number_chapters %}<strong>{{ chapter_num }}.</strong>{% endif %}
                                     {{ subsection.title }}
                                 </a>

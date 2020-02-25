@@ -50,6 +50,16 @@ $sidebar-width: 300px;
   color: gray;
 }
 
+.font-weight-bold {
+  font-weight: bold;
+}
+
+.active {
+  font-weight: bold;
+
+  color: $accent-color !important;
+}
+
 @import "navigation";
 @import "content";
 @import "header";
