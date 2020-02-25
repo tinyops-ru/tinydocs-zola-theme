@@ -16,7 +16,7 @@
   transition: 0.5s;
 
   .zola-anchor {
-    color: #4183c4;
+    color: $accent-color;
     padding-left: 10px;
     text-decoration: none;
     font-weight: initial;
@@ -34,7 +34,7 @@
 
   &__content {
     a {
-      color: #4183c4;
+      color: $accent-color;
       text-decoration: none;
 
       &:hover {
