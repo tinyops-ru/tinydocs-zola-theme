@@ -1,0 +1,18 @@
+name = "tinydocs"
+description = "A documentation theme"
+license = "MIT"
+homepage = "https://github.com/lebe-dev/tinydocs-zola-theme"
+min_version = "0.5.0"
+demo = ""
+
+[extra]
+book_number_chapters = true
+
+[author]
+name = "Eugene Lebedev"
+homepage = "https://tinyops.ru"
+
+[original]
+name = "Vincent Prouillet"
+homepage = "https://www.vincentprouillet.com"
+repo = "https://www.github.com/getzola/book"
