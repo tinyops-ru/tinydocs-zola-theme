@@ -13,6 +13,14 @@
 
   .menu__header {
     padding: 10px 10px 10px 15px;
+
+    .menu__header__kind {
+      font-size: 13px;
+    }
+
+    h2 {
+      margin-top: 10px;
+    }
   }
 
   ul {
