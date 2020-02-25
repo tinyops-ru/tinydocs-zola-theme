@@ -1,11 +1,18 @@
 .page {
   position: absolute;
+
   width: calc(100% - #{$sidebar-width});
+
   height: 100%;
+
   overflow-y: auto;
+
   color: #000;
+
   background: #fff;
+
   padding-bottom: 20px;
+
   transition: 0.5s;
 
   .zola-anchor {
@@ -13,6 +20,8 @@
     padding-left: 10px;
     text-decoration: none;
     font-weight: initial;
+
+    font-size: 0;
 
     &:hover {
       text-decoration: underline;
