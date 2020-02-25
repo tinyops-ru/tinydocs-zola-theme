@@ -1,3 +1,9 @@
-# tinydocs-zola-theme
+# Тема TinyDocs для Zola
 
-Тема для документаии. Для генератора статических сайтов Zola
+Тема для создания HTML-документации для генератора статических сайтов [Zola](https://www.getzola.org/).
+
+## Как собрать
+
+```shell script
+zola build --output-dir docs --base-url https://your-site.com
+```
