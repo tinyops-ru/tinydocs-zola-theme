@@ -15,6 +15,10 @@
 
   transition: 0.5s;
 
+  .page-title {
+    font-size: 3.4rem;
+  }
+
   .zola-anchor {
     color: $accent-color;
     padding-left: 10px;
@@ -110,7 +114,7 @@
 
     margin: 0 auto;
 
-    padding: 10px 15px 40px;
+    padding: 0 15px 40px;
 
     p {
       margin-top: 0;
