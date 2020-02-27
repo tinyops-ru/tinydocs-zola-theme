@@ -46,7 +46,7 @@ h2 {
 }
 
 h3 {
-   font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
 h4 {
@@ -63,6 +63,8 @@ h6 {
 
 ul, ol {
   margin-top: 5px;
+
+  margin-bottom: 5px;
 }
 
 @mixin min-screen($min-width: $body-width) {
