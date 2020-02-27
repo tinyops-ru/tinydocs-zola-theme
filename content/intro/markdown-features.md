@@ -38,7 +38,6 @@ weight = 4
 Пример вставки Rust кода:
 
 ```rust
-
 // `vst` uses macros, so we'll need to specify that we're using them!
 #[macro_use]
 extern crate vst;
@@ -51,7 +50,6 @@ impl Plugin for Whisper {
         }
     }
 }
-
 ```
 
 Мы также можем добавить имя файла в наши примеры кода имя файла. Это очень удобно
