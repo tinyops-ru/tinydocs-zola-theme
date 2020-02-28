@@ -9,6 +9,10 @@
     {{ section.content | safe }}
 {% endblock content %}
 
+{% block open_graph_description %}
+<meta property="og:description" content="{{ section.description }}"/>
+{% endblock open_graph_description %}
+
 {% block prev_link %}
     {# need to find the last page of the previous section or the previous section directly
      if there isn't any pages in it #}
