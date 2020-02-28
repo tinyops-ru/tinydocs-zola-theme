@@ -9,6 +9,8 @@
 
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
 
+    <link rel="canonical" href="{{ config.base_url }}">
+
     {% block meta_tag_description %}
     <meta name="Description" content="{{ config.description }}">
     {% endblock meta_tag_description %}
