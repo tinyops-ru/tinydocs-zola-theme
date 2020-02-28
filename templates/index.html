@@ -13,10 +13,6 @@
     <meta name="Description" content="{{ config.description }}">
     {% endblock meta_tag_description %}
 
-    {% if config.extra.open_graph_url %}
-    <meta property="og:url" content="{{ config.extra.open_graph_url }}" />
-    {% endif %}
-
     {% if config.extra.open_graph_title %}
     <meta property="og:title" content="{{ config.extra.open_graph_title }}" />
     {% endif %}
@@ -24,6 +20,12 @@
     {% block open_graph_description %}
     <meta property="og:description" content="{{ config.description }}" />
     {% endblock open_graph_description %}
+
+    {% block open_graph_url %}
+        {% if config.extra.open_graph_url %}
+        <meta property="og:url" content="{{ config.extra.open_graph_url }}" />
+        {% endif %}
+    {% endblock open_graph_url %}
 
     {% if config.extra.open_graph_type %}
     <meta property="og:type" content="{{ config.extra.open_graph_type }}" />

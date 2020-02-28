@@ -12,6 +12,10 @@
 <meta property="og:description" content="{{ page.description }}"/>
 {% endblock open_graph_description %}
 
+{% block open_graph_url %}
+<meta property="og:url" content="/{{ page.path }}" />
+{% endblock open_graph_url %}
+
 {% block content %}
     <h1 class="page-title">{{ page.title }}</h1>
     {{ page.content | safe }}
