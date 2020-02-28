@@ -8,6 +8,14 @@
 <meta name="Description" content="{{ section.description }}">
 {% endblock meta_tag_description %}
 
+{% block meta_tag_keywords %}
+{% if section.keywords %}
+<meta name="keywords" content="{{ section.keywords }}">
+{% else %}
+<meta name="keywords" content="{{ config.extra.keywords }}">
+{% endif %}
+{% endblock meta_tag_keywords %}
+
 {% block open_graph_description %}
 <meta property="og:description" content="{{ section.description }}"/>
 {% endblock open_graph_description %}

@@ -15,6 +15,10 @@
     <meta name="Description" content="{{ config.description }}">
     {% endblock meta_tag_description %}
 
+    {% block meta_tag_keywords %}
+    <meta name="keywords" content="{{ config.extra.keywords }}">
+    {% endblock meta_tag_keywords %}
+
     {% if config.extra.open_graph_title %}
     <meta property="og:title" content="{{ config.extra.open_graph_title }}" />
     {% endif %}
