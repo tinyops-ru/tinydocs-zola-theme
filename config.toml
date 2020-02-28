@@ -2,6 +2,7 @@
 base_url = "https://github.com/lebe-dev/tinydocs-zola-theme"
 
 title = "Someware"
+description = "Документация к приложению Someware"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -17,3 +18,8 @@ build_search_index = true
 documentation_for = "Someware v1.2.7"
 
 favicon_type = "image/x-icon"
+
+open_graph_url = "https://github.com/lebe-dev/tinydocs-zola-theme"
+open_graph_type = "article"
+open_graph_title = "Someware"
+open_graph_image = ""
