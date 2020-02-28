@@ -1,6 +1,8 @@
 # The URL the site will be built for
 base_url = "https://github.com/lebe-dev/tinydocs-zola-theme"
 
+title = "Someware"
+
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 
@@ -13,3 +15,5 @@ build_search_index = true
 
 [extra]
 documentation_for = "Someware v1.2.7"
+
+favicon_type = "image/x-icon"
