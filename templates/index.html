@@ -1,106 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-      <!-- Enable responsiveness on mobile devices-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-      <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+  <title>{% block title %}{{ config.title }}{% endblock title %}</title>
 
-      {% block js %}
-      {% endblock js %}
+  <link rel="icon" type="{{ config.extra.favicon_type }}" href="/favicon.ico">
 
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:800&display=swap&subset=cyrillic" rel="stylesheet">
+  {% block js %}
+  {% endblock js %}
 
-      <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:800&display=swap&subset=cyrillic" rel="stylesheet">
 
-      <!-- CSS -->
-      {% block css %}
-      <link rel="stylesheet" href="{{ get_url(path="style.css") | safe }}">
-      {% endblock css %}
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 
-      {% block extra_head %}
-      {% endblock extra_head %}
-    </head>
+  <!-- CSS -->
+  {% block css %}
+  <link rel="stylesheet" href="{{ get_url(path="style.css") | safe }}">
+  {% endblock css %}
 
-    <body>
-        <div class="menu">
-            {% block before_menu %}
-            <div class="menu__header">
-                <div class="menu__header__kind text-color-secondary">
-                    ДОКУМЕНТАЦИЯ
-                </div>
-                <h2>{{config.extra.documentation_for}}</h2>
+  {% block extra_head %}
+  {% endblock extra_head %}
+</head>
+
+<body>
+    <div class="menu">
+        {% block before_menu %}
+        <div class="menu__header">
+            <div class="menu__header__kind text-color-secondary">
+                ДОКУМЕНТАЦИЯ
             </div>
-
-            {% endblock before_menu %}
-            <nav role="navigation">
-                <ul>
-                    {% block menu %}
-                        {% set index = get_section(path="_index.md") %}
-                        {% for s in index.subsections %}
-                            {% set subsection = get_section(path=s) %}
-                            <li>
-                                {% set chapter_num = loop.index %}
-                                <a href="{{ subsection.permalink }}"
-                                   {% if current_path == subsection.path %}class="active"{% endif %}
-                                   {% if current_path != subsection.path %}class="font-weight-bold"{% endif %}
-                                >
-                                    {% if config.extra.book_number_chapters %}<strong>{{ chapter_num }}.</strong>{% endif %}
-                                    {{ subsection.title }}
-                                </a>
-                                {% if subsection.pages %}
-                                    <ul>
-                                        {% for page in subsection.pages %}
-                                            <li {% if current_path == page.path %}class="active"{% endif %}>
-                                                <a href="{{ page.permalink }}">
-                                                    {% if config.extra.book_number_chapters %}<strong>{{ chapter_num }}.{{ loop.index }}.</strong>{% endif %}
-                                                    {{ page.title }}
-                                                </a>
-                                            </li>
-                                        {% endfor %}
-                                    </ul>
-                                {% endif %}
-                            </li>
-                        {% endfor %}
-                    {% endblock menu %}
-                </ul>
-            </nav>
-            {% block after_menu %}
-            {% endblock after_menu %}
+            <h2>{{config.extra.documentation_for}}</h2>
         </div>
 
-        <div class="page">
-            <div class="page__header">
-                <div class="menu-icon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
+        {% endblock before_menu %}
+        <nav role="navigation">
+            <ul>
+                {% block menu %}
+                    {% set index = get_section(path="_index.md") %}
+                    {% for s in index.subsections %}
+                        {% set subsection = get_section(path=s) %}
+                        <li>
+                            {% set chapter_num = loop.index %}
+                            <a href="{{ subsection.permalink }}"
+                               {% if current_path == subsection.path %}class="active"{% endif %}
+                               {% if current_path != subsection.path %}class="font-weight-bold"{% endif %}
+                            >
+                                {% if config.extra.book_number_chapters %}<strong>{{ chapter_num }}.</strong>{% endif %}
+                                {{ subsection.title }}
+                            </a>
+                            {% if subsection.pages %}
+                                <ul>
+                                    {% for page in subsection.pages %}
+                                        <li {% if current_path == page.path %}class="active"{% endif %}>
+                                            <a href="{{ page.permalink }}">
+                                                {% if config.extra.book_number_chapters %}<strong>{{ chapter_num }}.{{ loop.index }}.</strong>{% endif %}
+                                                {{ page.title }}
+                                            </a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                {% endblock menu %}
+            </ul>
+        </nav>
+        {% block after_menu %}
+        {% endblock after_menu %}
+    </div>
 
-            <div class="page__content">
-                <div class="book-content">
-                    {% block content %}
-                    {% endblock content %}
-                </div>
-            </div>
-
-            <div class="prev-link">
-                {% block prev_link %}
-                {% endblock prev_link %}
-            </div>
-
-            <div class="next-link">
-                {% block next_link %}
-                {% endblock next_link %}
+    <div class="page">
+        <div class="page__header">
+            <div class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
 
-        <script type="text/javascript" src="{{ get_url(path="tinydocs.js") | safe }}"></script>
+        <div class="page__content">
+            <div class="book-content">
+                {% block content %}
+                {% endblock content %}
+            </div>
+        </div>
 
-    </body>
+        <div class="prev-link">
+            {% block prev_link %}
+            {% endblock prev_link %}
+        </div>
 
+        <div class="next-link">
+            {% block next_link %}
+            {% endblock next_link %}
+        </div>
+    </div>
+
+    <script type="text/javascript" src="{{ get_url(path="tinydocs.js") | safe }}"></script>
+
+</body>
 </html>
