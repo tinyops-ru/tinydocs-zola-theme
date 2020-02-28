@@ -4,14 +4,18 @@
 {{ section.title }} | {{ config.title }}
 {% endblock title %}
 
-{% block content %}
-    <h1>{{ section.title }}</h1>
-    {{ section.content | safe }}
-{% endblock content %}
+{% block meta_tag_description %}
+<meta name="Description" content="{{ section.description }}">
+{% endblock meta_tag_description %}
 
 {% block open_graph_description %}
 <meta property="og:description" content="{{ section.description }}"/>
 {% endblock open_graph_description %}
+
+{% block content %}
+    <h1>{{ section.title }}</h1>
+    {{ section.content | safe }}
+{% endblock content %}
 
 {% block prev_link %}
     {# need to find the last page of the previous section or the previous section directly
