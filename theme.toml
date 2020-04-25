@@ -1,7 +1,7 @@
 name = "tinydocs"
 description = "A documentation theme"
 license = "MIT"
-homepage = "https://github.com/lebe-dev/tinydocs-zola-theme"
+homepage = "https://github.com/tinyops-ru/tinydocs-zola-theme"
 min_version = "0.5.0"
 demo = ""
 
