@@ -46,9 +46,8 @@
     {% block js %}
     {% endblock js %}
 
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:800&display=swap&subset=cyrillic" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700;800&display=swap"
+          rel="stylesheet">
 
     <!-- CSS -->
     {% block css %}
@@ -67,6 +66,13 @@
                 ДОКУМЕНТАЦИЯ
             </div>
             <h2>{{config.extra.documentation_for}}</h2>
+
+            {% if config.extra.site_url %}
+            <div style="margin-top: 20px; margin-bottom: 10px">
+                <a href="{{config.extra.site_url}}" target="_blank" title="Перейти на сайт"
+                   class="menu__header__site-link">Сайт</a>
+            </div>
+            {% endif %}
         </div>
 
         {% endblock before_menu %}

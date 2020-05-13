@@ -19,6 +19,8 @@ keywords = "Документация, TinyDocs, zola, zola theme"
 
 documentation_for = "TinyDocs 1.0.0"
 
+site_url = "https://github.com/tinyops-ru/tinydocs-zola-theme"
+
 favicon_type = "image/x-icon"
 
 open_graph_url = "https://github.com/tinyops-ru/tinydocs-zola-theme"

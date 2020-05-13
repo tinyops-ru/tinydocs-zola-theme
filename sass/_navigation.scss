@@ -2,13 +2,21 @@
   padding: 15px;
 
   height: 100%;
+
   position: absolute;
+
   left: 0;
+
   overflow-y: auto;
+
   width: 300px;
+
   color: #364149;
+
   background: #fafafa;
+
   border-right: 1px solid rgba(0, 0, 0, 0.07);
+
   transition: 0.5s;
 
   font-size: 15px;
@@ -17,7 +25,31 @@
     padding: 10px 10px 10px 15px;
 
     .menu__header__kind {
-      font-size: 13px;
+      font-size: 12px;
+    }
+
+    .menu__header__site-link {
+      text-transform: uppercase;
+
+      color: #364149;
+
+      font-size: 12px;
+
+      text-decoration: none;
+
+      padding: 5px;
+
+      background-color: #efefef;
+
+      border-radius: 3px;
+    }
+
+    .menu__header__site-link:hover {
+      cursor: pointer;
+
+      color: $accent-color;
+
+      background-color: #e3e3e3;
     }
 
     h2 {
