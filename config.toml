@@ -27,3 +27,13 @@ open_graph_url = "https://github.com/tinyops-ru/tinydocs-zola-theme"
 open_graph_type = "article"
 open_graph_title = "TinyDocs 1.0.0"
 open_graph_image = ""
+
+#------------------------------------------
+# YANDEX
+#------------------------------------------
+
+# Yandex.WebMaster
+yandex_webmaster_verification_code = ""
+
+# Yandex Metrika
+yandex_metrika_counter = ""

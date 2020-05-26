@@ -1,3 +1,4 @@
+{% import "macros.html" as macros %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,6 +41,8 @@
     {% if config.extra.open_graph_image %}
     <meta property="og:image" content="{{ config.extra.open_graph_image }}" />
     {% endif %}
+
+    {{ macros::yandex_webmaster(classes="", extra=config.extra) }}
 
     <link rel="icon" type="{{ config.extra.favicon_type }}" href="/favicon.ico">
 
@@ -138,5 +141,7 @@
             {% endblock next_link %}
         </div>
     </div>
+
+    {{ macros::yandex_metrika(classes="", extra=config.extra) }}
 </body>
 </html>
