@@ -121,6 +121,16 @@ pre {
   padding: 10px $default_padding;
 }
 
+.menu-icon {
+  display: none;
+}
+
+@media only screen and (max-width: 767px), only screen and (max-device-width: 767px) {
+  .menu-icon {
+    display: block;
+  }
+}
+
 @import "navigation";
 @import "content";
 @import "header";
