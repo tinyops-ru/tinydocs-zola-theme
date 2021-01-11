@@ -9,9 +9,3 @@
 ```shell script
 zola build --output-dir docs --base-url https://your-site.com
 ```
-
-## RoadMap
-
-**1.1.0**
-
-- Поддержка поиска
