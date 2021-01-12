@@ -4,7 +4,7 @@
 
 $accent-color: #0039d6;
 
-$default_padding: 20px;
+$default-padding: 20px;
 
 * {
   box-sizing: border-box;
@@ -61,18 +61,29 @@ h4 {
 
 h5 {
   font-size: 2.0rem;
+
   margin-bottom: 3px;
 }
 
 h6 {
   font-size: 1.8rem;
+
   margin-bottom: 3px;
 }
 
-ul, ol {
-  margin-top: 5px;
+p {
+  margin-bottom: 0.3rem;
+}
 
-  margin-bottom: 5px;
+ul, ol {
+  // margin-bottom: 5px;
+
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+}
+
+.filename {
+  margin-bottom: 0.3rem;
 }
 
 @mixin min-screen($min-width: $body-width) {
@@ -118,7 +129,9 @@ summary:focus {
 pre {
   border-radius: 5px;
 
-  padding: 10px $default_padding;
+  margin-top: 0;
+
+  padding: 10px $default-padding;
 }
 
 .menu-icon {

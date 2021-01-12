@@ -17,6 +17,8 @@
 
   .page-title {
     font-size: 3.4rem;
+
+    margin-top: 4%;
   }
 
   .zola-anchor {
@@ -64,20 +66,23 @@
     }
 
     blockquote {
-      margin: 0;
-      margin-bottom: .85em;
+      margin: 0 0 .85em;
+
       padding: 0 15px;
+
       color: #858585;
+
       border-left: 4px solid #e5e5e5;
     }
 
     code {
       display: inline-block;
+
       vertical-align: middle;
+
       padding: 0.1em 0.3em;
       border-radius: 3px;
-      color: #6e6b5e;
-      background: #f1f1f1;
+
       font-size: 0.875em;
       font-family: "Source Code Pro", Consolas, "Ubuntu Mono", Menlo, "DejaVu Sans Mono", monospace, monospace;
     }
@@ -88,6 +93,7 @@
 
     table {
       margin: 0 auto;
+
       border-collapse: collapse;
       border-color: #cccccc;
 
@@ -99,17 +105,24 @@
       thead {
         th {
           padding: 6px 13px;
+
           font-weight: bold;
+
           border: 1px solid #ccc;
         }
       }
     }
 
     font-size: 1.6rem;
+
     word-wrap: break-word;
+
     line-height: 1.7;
+
     position: relative;
+
     left: 0;
+
     max-width: 800px;
 
     margin: 0 auto;
@@ -118,7 +131,7 @@
 
     p {
       margin-top: 0;
-      margin-bottom: 0.85em;
+      margin-bottom: 0.3rem;
     }
   }
 
